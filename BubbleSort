@@ -1,0 +1,56 @@
+
+/**
+ *
+ * @author Megan Jorgensen
+ */
+
+import java.util.Scanner;
+
+
+public class Exercise07_18 {
+    
+    public static void main(String[] args){
+        
+        //new scanner
+        Scanner scanner = new Scanner(System.in);
+        
+        //new array to hold user input numbers
+        double[] numbers = new double[10];
+        
+        System.out.print("Please enter 10 numbers: ");
+        
+        //store only 10 numbers in array
+        for(int i = 0; i < numbers.length; i++){
+            numbers[i] = scanner.nextDouble();
+        }
+        
+        //run array through bubbleSort method
+        bubbleSort(numbers);
+        
+        //print output
+        System.out.println("Your numbers, sorted: ");
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[i]);
+        }
+    }
+    
+    
+    //method to selection sort our array list
+    public static void bubbleSort(double[] list){
+        
+        int arraySize = list.length - 1; 
+        while(arraySize != 0){
+            int i;
+            for(i = 0; i < arraySize; i++){
+                if(list[i] > list[i + 1]){
+                    double temp = list[i];
+                    list[i] = list[i + 1];
+                    list[i + 1] = temp;
+                }
+            }
+            arraySize = i - 1;
+        }
+    }
+    
+    
+}
