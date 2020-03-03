@@ -1,0 +1,33 @@
+
+/**
+ * @author Megan Jorgensen
+ */
+
+import java.util.Scanner;
+
+public class Exercise02_01 {
+    
+    public static void main(String[] args){
+        
+        //get user input for Celsius value
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter Celsius value: ");
+        
+        int userCelsius = scanner.nextInt();
+        
+        
+        //print out answer
+        getFahrenheit(userCelsius);
+        
+    }
+    
+    //method to do the math 
+    public static void getFahrenheit(int celsius){
+        
+        double fahrenheit = (celsius * (9.0/5)) + 32;
+        
+        System.out.println(celsius + " in Celsius is " + fahrenheit +
+                " in Fahrenheit");
+    }
+    
+}
